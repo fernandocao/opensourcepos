@@ -33,12 +33,7 @@ services:
           - logs:/app/application/logs
         environment:
           - PHP_TIMEZONE=UTC
-          - CI_ENVIRONMENT=development
-          - MYSQL_USERNAME=admin
-          - MYSQL_PASSWORD=pointofsale
-          - MYSQL_DB_NAME=ospos
-          - MYSQL_HOST_NAME=mysql
-          - XDEBUG_CONFIG=remote_host=172.17.0.1
+          - XDEBUG_CONFIG=client_host=172.17.0.1
 
     mysql:
         image: mariadb:10.5
